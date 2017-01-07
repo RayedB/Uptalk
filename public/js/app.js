@@ -18,7 +18,7 @@ function($scope){
   }
 
   $scope.upVote = function(post) {
-  	$scope.upvotes ++;
+  	post.upvotes ++;
   }
 
 }]);
