@@ -1,0 +1,28 @@
+{
+  "name": "uptalk",
+  "description": "A pale copy of reddit/hackernews",
+  "main": "app.js",
+  "authors": [
+    "Rayed Benbrahim"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "reddit",
+    "hackernews",
+    "mean",
+    "nodejs",
+    "angularjs",
+    "mongodb",
+    "mongoose",
+    "express"
+  ],
+  "homepage": "https://github.com/RayedB/Uptalk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
