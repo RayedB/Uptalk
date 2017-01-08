@@ -45,7 +45,7 @@
         </nav>
       </div>
       <div class="row m-b-lg m-t-lg">
-        <div class="col-md-9">
+        <div class="col-md-8">
           <div class="profile-image">
             <img src="img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
           </div>
@@ -60,7 +60,7 @@
             </small>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <table class="table small m-b-xs">
             <tbody>
               <tr>
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-9" >
+        <div class="col-md-8" >
           <div class="social-feed-box" ng-repeat="post in posts | orderBy: '-upvotes'" >
             <div class="social-avatar">
               <a href="" class="pull-left">
@@ -120,9 +120,7 @@
               </p>
 
               <div class="btn-group">
-                <button class="btn btn-white btn-xs"><i class="fa fa-thumbs-up"></i> Like this!</button>
                 <button class="btn btn-white btn-xs"><i class="fa fa-comments"></i> Comment</button>
-                <button class="btn btn-white btn-xs"><i class="fa fa-share"></i> Share</button>
               </div>
             </div>
             <div class="social-footer">
@@ -164,18 +162,23 @@
                   <textarea class="form-control" placeholder="Write comment..."></textarea>
                 </div>
               </div>
-
             </div>
-
           </div>
-
-          <div ng-repeat="post in posts | orderBy: '-upvotes'">
-            <h3> {{post.author}} </h3>
-            <p> {{post.content}} </p>
-            <p> upvotes:  <span > ++ </span></p>
+        </div>
+        <div class="col-md-4">
+          <div class="ibox">
+            <div class="ibox-content">
+              <h3>Post a message</h3>
+              <div class="form-group">
+                <form ng-submit="addPost()">
+                  <label>Message</label>
+                  <textarea class="form-control" placeholder="Your message" rows="8" ng-model="message"></textarea>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit" >Send</button>
+              </form>
+            </div>
           </div>
-        <input type="button" ng-click="addPost()" value="add">
-      </div>
+        </div>
     </div>
     </div>
         </div>

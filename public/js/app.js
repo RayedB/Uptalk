@@ -14,7 +14,8 @@ function($scope){
   ]
 
   $scope.addPost = function() {
-  	$scope.posts.push({title:'Post '+( $scope.posts.length + 1), content: 'lorem ipsum sin dolor matel', upvotes: 0})
+  	$scope.posts.push({author:'Alex Smith', content: $scope.message, upvotes: 0})
+  	$scope.message="";
   }
 
   $scope.upVote = function(post) {
