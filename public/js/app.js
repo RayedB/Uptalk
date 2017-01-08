@@ -23,4 +23,8 @@ function($scope){
   	post.upvotes ++;
   }
 
+  $scope.downVote = function(post) {
+  	post.upvotes --;
+  }
+
 }]);
