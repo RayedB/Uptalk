@@ -1,18 +1,107 @@
 <html>
   <head>
-    <title>My Angular App!</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UpTalk board messages!</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="/js/app.js"></script>
   </head>
-  <body ng-app="flapperNews" ng-controller="MainCtrl">
-    <div>
-      <div ng-repeat="post in posts | orderBy: '-upvotes'">
-        <h3> {{post.title}} </h3>
-        <p> {{post.content}} </p>
-        <p> upvotes: {{post.upvotes}} <span ng-click="upVote(post)"> ++ </span></p>
-        
+  <body ng-app="flapperNews" ng-controller="MainCtrl" class="top-navigation">
+    <div id="wrapper">
+      <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom white-bg">
+          <nav class="navbar navbar-static-top" role="navigation">
+            <div class="navbar-header">
+              <a href="#" class="navbar-brand">Inspinia</a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                      <div class="navbar-header">
+                        <div class="form-group">
+                          <form>
+                            <input id="top-form" type="text" name="top-search" class="form-control" id="top-search" placeholder="Search for something...">
+                          </form>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
       </div>
-      <input type="button" ng-click="addPost()" value="add">
+      <div class="row m-b-lg m-t-lg">
+        <div class="col-md-9">
+          <div class="profile-image">
+            <img src="img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+          </div>
+          <div class="profile-info">
+            <h2 class="no-margins">
+                Alex Smith
+            </h2>
+            <h4>Founder of Groupeq</h4>
+            <small>
+                There are many variations of passages of Lorem Ipsum available, but the majority
+                have suffered alteration in some form Ipsum available.
+            </small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <table class="table small m-b-xs">
+            <tbody>
+              <tr>
+                <td>
+                  <strong>142</strong> Projects
+                </td>
+                <td>
+                  <strong>22</strong> Followers
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>61</strong> Comments
+                </td>
+                <td>
+                  <strong>54</strong> Articles
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>154</strong> Tags
+                </td>
+                <td>
+                  <strong>32</strong> Friends
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+          <div ng-repeat="post in posts | orderBy: '-upvotes'">
+            <h3> {{post.title}} </h3>
+            <p> {{post.content}} </p>
+            <p> upvotes: {{post.upvotes}} <span ng-click="upVote(post)"> ++ </span></p>
+          </div>
+        <input type="button" ng-click="addPost()" value="add">
+      </div>
     </div>
+    </div>
+        </div>
   </body>
 </html>
