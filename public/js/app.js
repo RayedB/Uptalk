@@ -6,11 +6,11 @@ function($scope){
   $scope.test = 'Hello Mike!';
 
   $scope.posts = [
-  	{ title: 'Post 1', content: 'lorem ipsum sin dolor matel', upvotes: 5},
-  	{ title: 'Post 2', content: 'lorem ipsum sin dolor matel', upvotes: 15},
-  	{ title: 'Post 3', content: 'lorem ipsum sin dolor matel', upvotes: 11},
-  	{ title: 'Post 4', content: 'lorem ipsum sin dolor matel', upvotes: 7},
-  	{ title: 'Post 5', content: 'lorem ipsum sin dolor matel', upvotes: 4},
+  	{ author: 'Mike Williams', content: 'lorem ipsum sin dolor matel', upvotes: 5},
+  	{ author: 'Richard Sherman', content: 'lorem ipsum sin dolor matel', upvotes: 15},
+  	{ author: 'Josh Norman', content: 'lorem ipsum sin dolor matel', upvotes: 11},
+  	{ author: 'Matthew Stafford', content: 'lorem ipsum sin dolor matel', upvotes: 7},
+  	{ author: 'Marshawn Lynch', content: 'lorem ipsum sin dolor matel', upvotes: 4},
   ]
 
   $scope.addPost = function() {
