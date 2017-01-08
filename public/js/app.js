@@ -14,6 +14,7 @@ function($scope){
   ]
 
   $scope.addPost = function() {
+  	if (!$scope.message || $scope.message ===''){ return; }
   	$scope.posts.push({author:'Alex Smith', content: $scope.message, upvotes: 0})
   	$scope.message="";
   }
