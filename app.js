@@ -1,4 +1,7 @@
 var app = angular.module('flapperNews', []);
+var mongoose = require('mongoose');
+
+
 
 app.controller('MainCtrl', [
 '$scope',
